@@ -31,12 +31,14 @@ Não permitir números negativos
 Perguntar ao final se o usuário deseja gerar outra tabuada
 '''
 while True:
+
     multiplier = int(input("Escolha o  multiplicador"))
     fixed = 0
 
-    if (multiplier) <0:
-        print("coloque somente valores positivos")
-        multiplier = int(input("Escolha o  multiplicador"))
+    while multiplier <= 0:
+        if (multiplier) <0:
+            print("coloque somente valores positivos")
+         
 
     multiplied_end = int(input("Escolha até qual valor quer multiplicar"))
 
@@ -49,10 +51,11 @@ while True:
         print(multiplier," X ", fixed, "=", fixed * multiplier)
         fixed += 1
     
-    repetir = input("Desejá continuar? (S ou N): ").lower()
-    if repetir in ("S", "Sim"):
+    repetir = input("Desejá continuar? S ou N: ").lower()
+    if repetir in ("s", "sim"):
        print("Encerrando...")
        
+    
        break
 
 
